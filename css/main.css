@@ -11,49 +11,45 @@ body {
 .nav-item {
     background-color: #5E6F57;
     margin: 2px;
-    border-radius: 10px; /* Ajusta esto al tamaño deseado */
+    border-radius: 10px; 
 }
 
-.nav-link, .nav-link.btn { /* Asegura que .nav-link tenga un color específico */
-    color: #CFB06D; /* Tu color personalizado */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
+.nav-link, .nav-link.btn { 
+    color: #CFB06D; 
+    text-decoration: none; 
 }
 
 .nav-link:hover, .nav-link.btn:hover {
-    background-color: #9D9064; /* Color de fondo al hacer hover */
-    color: #F8DFE2; /* Color de texto al hacer hover */
+    background-color: #9D9064; 
+    color: #F8DFE2; 
 }
-
 .btn-accent {
-    background-color: #5E6F57; /* Color de fondo para botones o elementos que se quieren acentuar */
-    color: #F8DFE2; /* Contraste de color de fuente para buena visibilidad */
+    background-color: #5E6F57; 
+    color: #F8DFE2; 
 }
-
 .btn-alternate {
-    background-color: #9D9064; /* Color alternativo para otros botones o elementos */
+    background-color: #9D9064; 
     color: #F8DFE2;
 }
-
 
 .hero-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/fondo.jpg') no-repeat center center;
     background-size: cover;
     color: #F8DFE2;
-    padding: 150px 0; /* Padding para pantallas grandes */
-    min-height: 500px; /* Altura mínima de la sección */
+    padding: 150px 0; 
+    min-height: 500px;
 }
 
-
 .my-separator {
-    border-top: 4px solid #2E3A37; /* Define el color y el grosor de la línea */
-    width: 90%; /* Ancho relativo al contenedor */
-    margin: 20px auto; /* Centra la línea horizontalmente y añade espacio verticalmente */
+    border-top: 4px solid #2E3A37;
+    width: 90%; 
+    margin: 20px auto; 
 }
 
 .img-fluid {
-    width: 100%; /* Asegura que la imagen cubra el contenedor */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Asegura que las imágenes se recorten para llenar el espacio sin distorsionar */
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
 }
 .custom-rounded {
     border-radius: 20px; 
@@ -64,11 +60,10 @@ body {
 }
 
 .fixed-size-img {
-    width: 200px; /* Ancho fijo para las imágenes */
-    height: 300px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Esto asegura que la imagen cubra el espacio asignado sin deformarse */
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }
-
 
 @media (max-width: 768px) {
     .hero-bg {
