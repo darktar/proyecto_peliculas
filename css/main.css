@@ -3,6 +3,10 @@ body {
     padding-top: 70px;
 }
 
+.title-two {
+    background-color:#212529;
+    color:#F8DFE2;
+}
 .header-container {
     background-color: #2E3A37;
     color: #CFB06D;
@@ -59,11 +63,13 @@ body {
     box-shadow: 5px 9px 8px rgba(0, 0, 0, 0.3);
 }
 
+
 .fixed-size-img {
     width: 200px;
     height: 300px;
     object-fit: cover;
 }
+
 
 @media (max-width: 768px) {
     .hero-bg {

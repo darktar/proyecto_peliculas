@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Películas</title>
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link  rel="stylesheet" href="css/aos.css">
+
+    <script src="js/aos.js"></script>
+
 </head>
 <body>
     <header>
@@ -21,7 +24,7 @@
                         <a class="nav-link rounded" href="#">Tendencias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded" href="#">Registrarse</a>
+                        <a class="nav-link rounded" href="./pages/registrarse.html">Registrarse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link rounded" href="#">Iniciar sesión</a>
@@ -31,42 +34,45 @@
         </nav>
     </header>
 
-    <main>
+    <main><div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
         <div class="container-fluid hero-bg text-center text-white py-5">
             <h1 class="mb-3">Todas las películas en un solo lugar</h1>
             <p class="lead mb-4">Solo debes registrarte</p>
-            <a href="#" class="btn btn-accent">Registrarse</a>
+            <a href="./pages/registrarse.html" class="btn btn-accent">Registrarse</a>
         </div>
+    </div>
         <hr class="my-separator">
         <div class="container my-5">
             <h2 class="text-center mb-4">Tendencias</h2>
             <div class="row g-5">
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <img src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
+                    <img data-aos="zoom-in" src="assets/covers/01.jpg" alt="Imagen de película" class="img-fluid custom-rounded custom-shadow fixed-size-img">
                 </div>
             </div>
         </div>
@@ -75,6 +81,8 @@
     
     
 
-
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
