@@ -7,66 +7,59 @@
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/svg+xml" href="../ico.svg">
 </head>
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand m-xl-2" href="#"><h1>Serg Movies</h1></a>
+            <a class="navbar-brand m-xl-2" href="../index.html"><h1>Serg Movies</h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link rounded" href="./pages/tendencias.html">Tendencias</a>
+                        <a class="nav-link rounded" href="./tendencias.html">Tendencias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded" href="./pages/registrarse.html">Registrarse</a>
+                        <a class="nav-link rounded" href="./registrarse.html">Registrarse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded" href="./pages/login.html">Iniciar sesión</a>
+                        <a class="nav-link rounded" href="./login.html">Iniciar sesión</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-
-
-
-    <div class="container mt-5"> <div class="row justify-content-center"> <div class="card mx-auto header-container" data-aos="fade-up" data-aos-duration="1000">
-         <div class="card-header title-two">
-                    <h5 class="card-title ">¡Regístrate!</h5>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="card mx-auto header-container" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-header title-two">
+                    <h5 class="card-title">¡Regístrate!</h5>
                 </div>
-
                 <div class="card-body">
-
-                    <form> <div class="form-group">
+                    <form id="registerForm">
+                        <div class="form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
                         </div>
-
                         <div class="form-group">
                             <label for="apellido">Apellido:</label>
                             <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
                         </div>
-
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>
                             <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
                         </div>
-
                         <div class="form-group">
                             <label for="contrasena">Contraseña:</label>
                             <input type="password" class="form-control" id="contrasena" placeholder="Ingrese su contraseña">
                         </div>
-
                         <div class="form-group">
                             <label for="fechaNacimiento">Fecha de nacimiento:</label>
                             <input type="date" class="form-control" id="fechaNacimiento">
                         </div>
-
                         <div class="form-group">
                             <label for="pais">País:</label>
                             <select class="form-control" id="pais">
@@ -76,32 +69,54 @@
                                 <option value="Chile">Chile</option>
                                 <option value="Uruguay">Uruguay</option>
                                 <option value="Paraguay">Paraguay</option>
-                                </select>
+                            </select>
                         </div>
-
                         <div class="form-group">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="terminos">
                                 <label class="form-check-label" for="terminos">Acepto términos y condiciones</label>
                             </div>
                         </div>
-
                         <button type="submit" class="btn btn-accent">Registrarse</button>
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
+    </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Registro exitoso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Usuario registrado.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../js/aos.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script>
         AOS.init();
+        //llamdo del boton 
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Muestro la ventana modal
+            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
+            // me voy al index nuevamente.
+            document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+                window.location.href = '../index.html';
+            });
+        });
     </script>
-
 </body>
 </html>
