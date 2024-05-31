@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const API_KEY = '0571e019cd62b2cea267f829da04437d';
-    const BASE_URL = 'https://api.themoviedb.org/1';
+    const BASE_URL = 'https://api.themoviedb.org/3';
     const LANGUAGE = 'es-AR';
     const MOVIE_CONTAINER = document.getElementById('movie-container');
     function getTrendingMovies() {
