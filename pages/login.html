@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand m-xl-2" href="#"><h1>Serg Movies</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="./pages/tendencias.html">Tendencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="./pages/registrarse.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="./pages/login.html">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="card mx-auto header-container" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-header title-two">
+                    <h5 class="card-title">¡Inicia Sesión!</h5>
+                </div>
+
+                <div class="card-body">
+                    <form action="login.html" method="POST">
+                        <div class="form-group">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su usuario">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña">
+                        </div>
+
+                        <button type="submit" class="btn btn-accent">Iniciar Sesión</button>
+                    </form>
+                    <div id="login-message" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // JavaScript para manejar el formulario
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+            // Aquí puedes agregar validación o autenticación real
+            // Para este ejemplo, simplemente mostramos un mensaje de éxito
+            document.getElementById('login-message').innerHTML = '<div class="alert alert-success" role="alert">¡Inicio de sesión exitoso!</div>';
+
+            // Puedes redirigir al usuario a otra página después de un tiempo
+            setTimeout(function() {
+                window.location.href = '../index.html'; // Redirige a la página principal después de 2 segundos
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
