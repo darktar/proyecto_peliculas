@@ -62,22 +62,9 @@
 
     <script src="../js/aos.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validacion.js"></script>
     <script>
         AOS.init();
-
-        // JavaScript para manejar el formulario
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-
-            // Aquí puedes agregar validación o autenticación real
-            // Para este ejemplo, simplemente mostramos un mensaje de éxito
-            document.getElementById('login-message').innerHTML = '<div class="alert alert-success" role="alert">¡Inicio de sesión exitoso!</div>';
-
-            // Puedes redirigir al usuario a otra página después de un tiempo
-            setTimeout(function() {
-                window.location.href = '../index.html'; // Redirige a la página principal después de 2 segundos
-            }, 2000);
-        });
     </script>
 
 </body>
